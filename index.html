@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="uk" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        Безпека. GitHub Pages не дозволяє задавати HTTP-заголовки,
+        тому правила задано через meta. Скрипти, стилі, шрифти та фото —
+        лише з цього сайту. Якщо додаєте сторонній скрипт чи сервіс —
+        додайте його домен у відповідну директиву, інакше браузер його заблокує.
+    -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; frame-src https://script.google.com https://*.googleusercontent.com; object-src 'none'; base-uri 'self'; form-action https://script.google.com https://*.googleusercontent.com; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>Електрик Миколаїв — ЕЛЕКТРОБУД | Електромонтажні та будівельні роботи</title>
+
+    <meta name="description" content="ЕЛЕКТРОБУД — електрик у Миколаєві: електромонтажні, будівельні, ремонтні роботи, відеоспостереження та монтаж сонячних панелей. Пн–Сб 8:00–20:00, відповідаємо до 15 хвилин. Миколаїв та вся Україна.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b0c0e">
+
+    <!--
+        Адреса сайту (GitHub Pages). Якщо з'явиться власний домен —
+        замініть її тут, в og:url, og:image та в JSON-LD нижче.
+    -->
+    <link rel="canonical" href="https://energobud.github.io/elektrobud-site/">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+    <meta property="og:site_name" content="ЕЛЕКТРОБУД">
+    <meta property="og:title" content="ЕЛЕКТРОБУД — електрик та будівельні роботи в Миколаєві">
+    <meta property="og:description" content="Електромонтаж, відеоспостереження, сонячні панелі, ремонт. Пн–Сб 8:00–20:00. Відповідаємо до 15 хвилин. Ціна договірна.">
+    <meta property="og:url" content="https://energobud.github.io/elektrobud-site/">
+    <meta property="og:image" content="https://energobud.github.io/elektrobud-site/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ЕЛЕКТРОБУД — електромонтажні та будівельні роботи">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Electrician",
+        "name": "ЕЛЕКТРОБУД",
+        "description": "Електромонтажні, будівельні та ремонтні роботи, відеоспостереження, монтаж сонячних панелей.",
+        "url": "https://energobud.github.io/elektrobud-site/",
+        "image": "https://energobud.github.io/elektrobud-site/og-image.jpg",
+        "telephone": "+380635062371",
+        "priceRange": "Договірна",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Миколаїв",
+            "addressCountry": "UA"
+        },
+        "areaServed": [
+            { "@type": "City", "name": "Миколаїв" },
+            { "@type": "Country", "name": "Україна" }
+        ],
+        "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "20:00"
+        }],
+        "sameAs": ["https://t.me/nikoelectro"],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Послуги",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Електромонтажні роботи" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Встановлення відеоспостереження" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Монтаж сонячних панелей" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Внутрішні та оздоблювальні роботи" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Покрівельні та земляні роботи" } }
+            ]
+        }
+    }
+    </script>
+
+    <link rel="preload" href="fonts/unbounded-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/manrope-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <script src="boot.js"></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ============ Іконки (SVG-спрайт) ============ -->
+    <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+        <symbol id="i-cctv" viewBox="0 0 24 24"><path d="m2 8 14-4 2 7-14 4z"/><path d="m18 9 4-1v5l-4 1"/><path d="M7 14v6H4"/></symbol>
+        <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+        <symbol id="i-roller" viewBox="0 0 24 24"><rect x="3" y="3" width="15" height="6" rx="1"/><path d="M18 6h3v6h-9v3"/><rect x="10" y="15" width="4" height="7" rx="1"/></symbol>
+        <symbol id="i-roof" viewBox="0 0 24 24"><path d="M2 12 12 4l10 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></symbol>
+        <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"/></symbol>
+        <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></symbol>
+        <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+        <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+        <symbol id="i-calc" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="1"/><path d="M8 6h8M8 11h2M14 11h2M8 15h2M14 15h2M8 19h2M14 19h2"/></symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+        <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></symbol>
+        <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></symbol>
+        <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+        <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 20V4M6 10l6-6 6 6"/></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="m22 6-10 7L2 6"/></symbol>
+        <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+        <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+    </svg>
+
+    <a class="skip-link" href="#contact">Перейти до контактів</a>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header" id="site-header">
+        <div class="container site-header__inner">
+
+            <a class="logo" href="#top" data-scroll aria-label="ЕЛЕКТРОБУД — на початок сторінки">
+                <span class="logo__mark" aria-hidden="true"><svg><use href="#i-bolt"/></svg></span>
+                <span class="logo__text">ЕЛЕКТРОБУД</span>
+            </a>
+
+            <nav class="nav" id="nav" aria-label="Розділи сторінки">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="#services" data-scroll>Послуги</a></li>
+                    <li><a class="nav__link" href="#about" data-scroll>Про нас</a></li>
+                    <li><a class="nav__link" href="#process" data-scroll>Етапи</a></li>
+                    <li><a class="nav__link" href="#advantages" data-scroll>Переваги</a></li>
+                    <li><a class="nav__link" href="#contact" data-scroll>Контакти</a></li>
+                </ul>
+
+                <div class="nav__mobile-extra">
+                    <a class="btn btn--primary js-phone" data-track="call-menu">
+                        <svg aria-hidden="true"><use href="#i-phone"/></svg> Зателефонувати
+                    </a>
+                    <p class="nav__meta">Пн–Сб 8:00–20:00 · Відповідаємо до 15 хвилин</p>
+                </div>
+            </nav>
+
+            <div class="site-header__actions">
+                <a class="header-phone js-phone" data-track="call-header" data-label="{pretty}">
+                    <svg aria-hidden="true"><use href="#i-phone"/></svg>
+                    <span class="js-phone-text">Показати номер</span>
+                </a>
+                <a class="btn btn--primary btn--sm" href="#contact" data-scroll data-track="cta-header">Зв'язатися</a>
+                <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Відкрити меню">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+
+    <main id="top">
+
+        <!-- ============ HERO ============ -->
+        <section class="hero" aria-labelledby="hero-title">
+
+            <div class="hero__media" aria-hidden="true">
+                <img class="hero__img" data-parallax="0.25"
+                     src="images/hero-tower-night-1600.webp"
+                     srcset="images/hero-tower-night-800.webp 800w, images/hero-tower-night-1600.webp 1600w, images/hero-tower-night-1920.webp 1920w"
+                     sizes="100vw" width="1920" height="1280" alt="" fetchpriority="high">
+            </div>
+
+            <!-- Анімовані технічні лінії -->
+            <svg class="hero__lines" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <path class="hero__line hero__line--1" d="M-20 700 H520 L640 580 H1460"/>
+                <path class="hero__line hero__line--2" d="M980 -20 V260 L1100 380 V920"/>
+                <path class="hero__line hero__line--3" d="M-20 820 H300 L380 740 H900"/>
+                <circle class="hero__node" cx="640" cy="580" r="5"/>
+                <circle class="hero__node" cx="1100" cy="380" r="5"/>
+                <circle class="hero__ring" cx="1100" cy="380" r="46"/>
+            </svg>
+
+            <div class="hero__grid" aria-hidden="true"></div>
+
+            <div class="container hero__inner">
+
+                <div class="hero__content">
+                    <p class="eyebrow hero__anim">
+                        <span class="eyebrow__dot" aria-hidden="true"></span>
+                        Миколаїв та вся Україна
+                    </p>
+
+                    <h1 class="hero__title" id="hero-title">
+                        <span class="hero__line-wrap"><span class="hero__anim">Електромонтажні</span></span>
+                        <span class="hero__line-wrap"><span class="hero__anim">та будівельні</span></span>
+                        <span class="hero__line-wrap"><span class="hero__anim hero__accent">роботи</span></span>
+                    </h1>
+
+                    <p class="hero__lead hero__anim">
+                        Надійність у кожному рішенні. Електромонтажні, будівельні та ремонтні
+                        роботи будь-якої складності — відповідально, якісно та з індивідуальним
+                        підходом до кожного клієнта.
+                    </p>
+
+                    <div class="hero__cta hero__anim" data-hide-mobile-bar>
+                        <a class="btn btn--primary btn--lg js-phone" data-track="call-hero">
+                            <svg aria-hidden="true"><use href="#i-phone"/></svg> Зателефонувати
+                        </a>
+                        <a class="btn btn--ghost btn--lg" href="https://t.me/nikoelectro" target="_blank" rel="noopener noreferrer" data-track="telegram-hero">
+                            <svg aria-hidden="true"><use href="#i-send"/></svg> Написати в Telegram
+                        </a>
+                        <a class="btn-link js-viber" data-track="viber-hero">
+                            <svg aria-hidden="true"><use href="#i-chat"/></svg> або у Viber
+                        </a>
+                    </div>
+
+                    <noscript>
+                        <p class="noscript-note">
+                            Щоб побачити номер телефону, увімкніть JavaScript —
+                            або напишіть нам у Telegram: <a href="https://t.me/nikoelectro" rel="noopener noreferrer">@nikoelectro</a>
+                        </p>
+                    </noscript>
+                </div>
+
+                <!-- Технічна панель з фактами -->
+                <aside class="hero__panel hero__anim" aria-label="Коротко про умови">
+                    <span class="corner corner--tl" aria-hidden="true"></span>
+                    <span class="corner corner--br" aria-hidden="true"></span>
+                    <dl class="spec">
+                        <div class="spec__row"><dt>Графік</dt><dd>Пн–Сб · 08:00–20:00</dd></div>
+                        <div class="spec__row"><dt>Відповідь</dt><dd>до 15 хвилин</dd></div>
+                        <div class="spec__row"><dt>Вартість</dt><dd>договірна</dd></div>
+                        <div class="spec__row"><dt>Регіон</dt><dd>Миколаїв / Україна</dd></div>
+                    </dl>
+                </aside>
+
+            </div>
+
+            <a class="hero__scroll" href="#services" data-scroll aria-label="Прокрутити до послуг">
+                <span class="hero__scroll-line" aria-hidden="true"></span>
+                <span>Гортайте</span>
+            </a>
+
+        </section>
+
+
+        <!-- ============ Біжучий рядок ============ -->
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker__track">
+                <span>Електромонтаж</span><span>Відеоспостереження</span><span>Сонячні панелі</span><span>Оздоблювальні роботи</span><span>Покрівля</span><span>Земляні роботи</span><span>Ціна договірна</span>
+                <span>Електромонтаж</span><span>Відеоспостереження</span><span>Сонячні панелі</span><span>Оздоблювальні роботи</span><span>Покрівля</span><span>Земляні роботи</span><span>Ціна договірна</span>
+            </div>
+        </div>
+
+
+        <!-- ============ ПОСЛУГИ ============ -->
+        <section class="section" id="services" aria-labelledby="services-title">
+            <div class="container">
+
+                <div class="section-head reveal">
+                    <p class="section-head__index">01 / Послуги</p>
+                    <h2 class="section-head__title" id="services-title">Наші послуги</h2>
+                    <p class="section-head__text">
+                        Широкий спектр електромонтажних, будівельних та ремонтних робіт будь-якої складності.
+                    </p>
+                </div>
+
+                <div class="services">
+
+                    <article class="service service--xl reveal">
+                        <img class="service__img" src="images/electrician-meter-800.webp" srcset="images/electrician-meter-800.webp 800w, images/electrician-meter-1600.webp 1600w" sizes="(min-width: 960px) 58vw, 100vw" width="1600" height="1200" alt="Електрик перевіряє електрощит мультиметром" loading="lazy" decoding="async">
+                        <div class="service__body">
+                            <span class="service__num">01</span>
+                            <span class="service__icon" aria-hidden="true"><svg><use href="#i-bolt"/></svg></span>
+                            <h3 class="service__title">Електромонтажні роботи</h3>
+                            <ul class="service__list">
+                                <li>Монтаж, заміна та ремонт електропроводки</li>
+                                <li>Встановлення розеток і вимикачів</li>
+                                <li>Монтаж освітлення та електрощитів</li>
+                                <li>Електромонтаж у будинках, квартирах та офісах</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="service service--md reveal">
+                        <img class="service__img" src="images/cctv-grey-800.webp" width="800" height="531" alt="Камери відеоспостереження на фасаді" loading="lazy" decoding="async">
+                        <div class="service__body">
+                            <span class="service__num">02</span>
+                            <span class="service__icon" aria-hidden="true"><svg><use href="#i-cctv"/></svg></span>
+                            <h3 class="service__title">Відеоспостереження</h3>
+                            <ul class="service__list">
+                                <li>Встановлення систем відеоспостереження</li>
+                                <li>Налаштування камер</li>
+                                <li>Віддалений перегляд зі смартфона</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="service service--md reveal">
+                        <img class="service__img" src="images/solar-worker-800.webp" width="800" height="534" alt="Монтаж сонячної панелі" loading="lazy" decoding="async">
+                        <div class="service__body">
+                            <span class="service__num">03</span>
+                            <span class="service__icon" aria-hidden="true"><svg><use href="#i-sun"/></svg></span>
+                            <h3 class="service__title">Сонячні панелі</h3>
+                            <ul class="service__list">
+                                <li>Монтаж сонячних панелей</li>
+                                <li>Встановлення супутнього обладнання</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="service service--sm reveal">
+                        <img class="service__img" src="images/plaster-hands-800.webp" width="800" height="533" alt="Шпаклювання стіни" loading="lazy" decoding="async">
+                        <div class="service__body">
+                            <span class="service__num">04</span>
+                            <span class="service__icon" aria-hidden="true"><svg><use href="#i-roller"/></svg></span>
+                            <h3 class="service__title">Внутрішні та оздоблювальні роботи</h3>
+                            <ul class="service__list">
+                                <li>Шпаклювання стін і стель</li>
+                                <li>Малярні роботи</li>
+                                <li>Підготовка поверхонь</li>
+                                <li>Плиточні роботи</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="service service--sm reveal">
+                        <img class="service__img" src="images/roof-tiles-dark-800.webp" width="800" height="600" alt="Темна металочерепиця покрівлі" loading="lazy" decoding="async">
+                        <div class="service__body">
+                            <span class="service__num">05</span>
+                            <span class="service__icon" aria-hidden="true"><svg><use href="#i-roof"/></svg></span>
+                            <h3 class="service__title">Покрівельні та земляні роботи</h3>
+                            <ul class="service__list">
+                                <li>Усі види покрівельних робіт</li>
+                                <li>Демонтажні роботи</li>
+                                <li>Риття котлованів</li>
+                                <li>Земляні роботи різної складності</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="service service--sm reveal">
+                        <img class="service__img" src="images/panel-modules-800.webp" width="800" height="533" alt="Відкрита шафа автоматики з модулями" loading="lazy" decoding="async">
+                        <div class="service__body">
+                            <span class="service__num">06</span>
+                            <span class="service__icon" aria-hidden="true"><svg><use href="#i-wrench"/></svg></span>
+                            <h3 class="service__title">Додаткові послуги</h3>
+                            <ul class="service__list">
+                                <li>Діагностика несправностей</li>
+                                <li>Модернізація електричних систем</li>
+                                <li>Технічне обслуговування</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============ ПРО НАС ============ -->
+        <section class="section about" id="about" aria-labelledby="about-title">
+            <div class="container about__inner">
+
+                <div class="about__media reveal">
+                    <div class="about__frame" aria-hidden="true"></div>
+                    <div class="about__img-wrap">
+                        <img class="about__img" data-parallax="0.08" src="images/powerlines-night-800.webp" srcset="images/powerlines-night-800.webp 800w, images/powerlines-night-1600.webp 1600w" sizes="(min-width: 960px) 45vw, 100vw" width="1600" height="1067" alt="Лінія електропередач уночі" loading="lazy" decoding="async">
+                    </div>
+                    <span class="about__tag">Миколаїв · Україна</span>
+                </div>
+
+                <div class="about__content">
+                    <div class="section-head reveal">
+                        <p class="section-head__index">02 / Про нас</p>
+                        <h2 class="section-head__title" id="about-title">ЕЛЕКТРОБУД</h2>
+                    </div>
+
+                    <p class="about__lead reveal">
+                        Пропонуємо широкий спектр електромонтажних, будівельних та ремонтних
+                        робіт будь-якої складності. Працюємо відповідально, якісно та з
+                        індивідуальним підходом до кожного клієнта.
+                    </p>
+
+                    <!-- ЗАГЛУШКА: коротка історія компанії -->
+                    <p class="about__text reveal">
+                        [Коротка історія компанії: з якого року працюєте, хто виконує роботи,
+                        які об'єкти обслуговуєте — 2–3 речення.]
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ============ ЕТАПИ РОБОТИ ============ -->
+        <section class="section section--dark process" id="process" aria-labelledby="process-title">
+            <div class="container">
+
+                <div class="section-head reveal">
+                    <p class="section-head__index">03 / Етапи</p>
+                    <h2 class="section-head__title" id="process-title">Як ми працюємо</h2>
+                </div>
+
+                <ol class="timeline" id="timeline">
+                    <li class="timeline__progress" aria-hidden="true"><span id="timeline-bar"></span></li>
+                    <li class="timeline__step reveal">
+                        <span class="timeline__dot" aria-hidden="true"></span>
+                        <span class="timeline__num">01</span>
+                        <h3 class="timeline__title">Заявка</h3>
+                        <p class="timeline__text">Телефонуєте або пишете в Telegram чи Viber. Відповідаємо до 15 хвилин.</p>
+                    </li>
+                    <li class="timeline__step reveal">
+                        <span class="timeline__dot" aria-hidden="true"></span>
+                        <span class="timeline__num">02</span>
+                        <h3 class="timeline__title">Обговорення</h3>
+                        <p class="timeline__text">Уточнюємо задачу, обсяг і складність робіт, підбираємо оптимальне рішення.</p>
+                    </li>
+                    <li class="timeline__step reveal">
+                        <span class="timeline__dot" aria-hidden="true"></span>
+                        <span class="timeline__num">03</span>
+                        <h3 class="timeline__title">Вартість</h3>
+                        <p class="timeline__text">Ціна договірна — усі деталі та вартість узгоджуємо заздалегідь.</p>
+                    </li>
+                    <li class="timeline__step reveal">
+                        <span class="timeline__dot" aria-hidden="true"></span>
+                        <span class="timeline__num">04</span>
+                        <h3 class="timeline__title">Виконання</h3>
+                        <p class="timeline__text">Виконуємо роботи відповідально та якісно.</p>
+                    </li>
+                    <li class="timeline__step reveal">
+                        <span class="timeline__dot" aria-hidden="true"></span>
+                        <span class="timeline__num">05</span>
+                        <h3 class="timeline__title">Результат</h3>
+                        <p class="timeline__text">Здаємо готовий об'єкт і залишаємося на зв'язку для обслуговування.</p>
+                    </li>
+                </ol>
+
+            </div>
+        </section>
+
+
+        <!-- ============ ПЕРЕВАГИ ============ -->
+        <section class="section advantages" id="advantages" aria-labelledby="advantages-title">
+            <div class="container">
+
+                <div class="section-head reveal">
+                    <p class="section-head__index">04 / Переваги</p>
+                    <h2 class="section-head__title" id="advantages-title">Чому обирають нас</h2>
+                </div>
+
+                <ul class="features">
+                    <li class="feature reveal">
+                        <span class="feature__icon" aria-hidden="true"><svg><use href="#i-layers"/></svg></span>
+                        <h3 class="feature__title">Роботи будь-якої складності</h3>
+                    </li>
+                    <li class="feature reveal">
+                        <span class="feature__icon" aria-hidden="true"><svg><use href="#i-sliders"/></svg></span>
+                        <h3 class="feature__title">Індивідуальний підхід до клієнта</h3>
+                    </li>
+                    <li class="feature reveal">
+                        <span class="feature__icon" aria-hidden="true"><svg><use href="#i-shield"/></svg></span>
+                        <h3 class="feature__title">Відповідальне ставлення до роботи</h3>
+                    </li>
+                    <li class="feature reveal">
+                        <span class="feature__icon" aria-hidden="true"><svg><use href="#i-target"/></svg></span>
+                        <h3 class="feature__title">Підбір оптимальних рішень</h3>
+                    </li>
+                    <li class="feature reveal">
+                        <span class="feature__icon" aria-hidden="true"><svg><use href="#i-calc"/></svg></span>
+                        <h3 class="feature__title">Попереднє узгодження вартості</h3>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+
+        <!-- ============ КОНТАКТИ ============ -->
+        <section class="section contact" id="contact" aria-labelledby="contact-title">
+            <div class="contact__bg" aria-hidden="true">
+                <img src="images/cable-dark-800.webp" srcset="images/cable-dark-800.webp 800w, images/cable-dark-1600.webp 1600w" sizes="100vw" width="1600" height="900" alt="" loading="lazy" decoding="async">
+            </div>
+
+            <div class="container contact__inner">
+
+                <div class="contact__info">
+                    <div class="section-head reveal">
+                        <p class="section-head__index">05 / Контакти</p>
+                        <h2 class="section-head__title section-head__title--xl" id="contact-title">Зв'яжіться<br>з нами</h2>
+                    </div>
+
+                    <p class="contact__lead reveal">
+                        Потрібно провести електрику, зробити ремонт, встановити відеоспостереження
+                        або сонячні панелі? Звертайтеся — підберемо оптимальне рішення!
+                    </p>
+
+                    <div class="contact__cta reveal" data-hide-mobile-bar>
+                        <a class="btn btn--primary btn--lg js-phone" data-track="call-contact">
+                            <svg aria-hidden="true"><use href="#i-phone"/></svg> Зателефонувати
+                        </a>
+                        <a class="btn btn--ghost btn--lg" href="https://t.me/nikoelectro" target="_blank" rel="noopener noreferrer" data-track="telegram-contact">
+                            <svg aria-hidden="true"><use href="#i-send"/></svg> Telegram
+                        </a>
+                        <a class="btn btn--ghost btn--lg js-viber" data-track="viber-contact">
+                            <svg aria-hidden="true"><use href="#i-chat"/></svg> Viber
+                        </a>
+                    </div>
+
+                    <ul class="contact__list reveal">
+                        <li>
+                            <svg aria-hidden="true"><use href="#i-phone"/></svg>
+                            <a class="js-phone" data-track="call-contact-list" data-label="{pretty}">Показати номер</a>
+                        </li>
+                        <li>
+                            <svg aria-hidden="true"><use href="#i-clock"/></svg>
+                            <span>Пн–Сб 8:00–20:00 · відповідаємо до 15 хвилин</span>
+                        </li>
+                        <li>
+                            <svg aria-hidden="true"><use href="#i-pin"/></svg>
+                            <span>Миколаїв та вся Україна · []</span>
+                        </li>
+                        <li>
+                            <svg aria-hidden="true"><use href="#i-mail"/></svg>
+                            <span>[budelektro10@gmail.com]</span>
+                        </li>
+                    </ul>
+
+                    <!-- ЗАГЛУШКА КАРТИ. Щоб вставити Google Maps, додайте https://www.google.com у frame-src CSP. -->
+                    <div class="map reveal" role="img" aria-label="Карта: Миколаїв (заглушка)">
+                        <div class="map__grid" aria-hidden="true"></div>
+                        <svg class="map__roads" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
+                            <path d="M0 140 C80 120 120 160 200 120 S320 60 400 80"/>
+                            <path d="M60 0 L140 200"/>
+                            <path d="M260 0 L230 200"/>
+                            <path d="M0 60 H400"/>
+                        </svg>
+                        <span class="map__pin" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
+                        <span class="map__label">Миколаїв · [Карта]</span>
+                    </div>
+                </div>
+
+                <!-- Форма заявки: після перевірки дані зберігаються в Google Sheets. -->
+                <div class="form-card reveal">
+                    <span class="corner corner--tl" aria-hidden="true"></span>
+                    <span class="corner corner--br" aria-hidden="true"></span>
+
+                    <form class="form" id="contact-form" novalidate>
+                        <h3 class="form__title">Залиште заявку</h3>
+                        <p class="form__hint">Поля з <span aria-hidden="true">*</span><span class="visually-hidden">зірочкою</span> — обов'язкові.</p>
+
+                        <div class="form__error-summary" id="form-errors" role="alert" hidden></div>
+
+                        <div class="field">
+                            <label class="field__label" for="f-name">Ім'я <span aria-hidden="true">*</span></label>
+                            <input class="field__input" id="f-name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="60" aria-describedby="f-name-err">
+                            <p class="field__error" id="f-name-err"></p>
+                        </div>
+
+                        <div class="field">
+                            <label class="field__label" for="f-phone">Телефон <span aria-hidden="true">*</span></label>
+                            <input class="field__input" id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+380 __ ___ __ __" required maxlength="20" aria-describedby="f-phone-err">
+                            <p class="field__error" id="f-phone-err"></p>
+                        </div>
+
+                        <div class="field">
+                            <label class="field__label" for="f-email">Email</label>
+                            <input class="field__input" id="f-email" name="email" type="email" autocomplete="email" maxlength="80" aria-describedby="f-email-err">
+                            <p class="field__error" id="f-email-err"></p>
+                        </div>
+
+                        <div class="field">
+                            <label class="field__label" for="f-message">Повідомлення <span aria-hidden="true">*</span></label>
+                            <textarea class="field__input field__input--area" id="f-message" name="message" rows="4" required minlength="10" maxlength="1000" aria-describedby="f-message-err"></textarea>
+                            <p class="field__error" id="f-message-err"></p>
+                        </div>
+
+                        <button class="btn btn--primary btn--lg btn--block" type="submit" data-track="form-submit">
+                            Надіслати заявку <svg aria-hidden="true"><use href="#i-arrow-right"/></svg>
+                        </button>
+
+                        <p class="form__note">
+                            Після надсилання заявка автоматично збережеться в таблиці. За бажанням
+                            ви зможете додатково відкрити Telegram і надіслати повідомлення.
+                        </p>
+                    </form>
+
+                    <div class="form-success" id="form-success" role="status" tabindex="-1" hidden>
+                        <span class="form-success__icon" aria-hidden="true"><svg><use href="#i-shield"/></svg></span>
+                        <h3 class="form__title">Заявку збережено</h3>
+                        <p>Дякуємо! Ваші контактні дані та повідомлення успішно збережено. За потреби можете додатково написати нам у Telegram.</p>
+                        <pre class="form-success__text" id="form-success-text"></pre>
+                        <div class="form-success__actions">
+                            <a class="btn btn--primary" id="form-telegram" href="https://t.me/nikoelectro" target="_blank" rel="noopener noreferrer" data-track="form-telegram">
+                                <svg aria-hidden="true"><use href="#i-send"/></svg> Відкрити Telegram
+                            </a>
+                            <button class="btn btn--ghost" type="button" id="form-copy">Скопіювати ще раз</button>
+                            <button class="btn-link" type="button" id="form-reset">Нова заявка</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Підказка, якщо Viber не відкрився (показується скриптом) -->
+    <div class="viber-fallback" id="viber-fallback" role="status" hidden>
+        <strong>Не вдалося відкрити Viber?</strong><br>
+        Якщо браузер запитує дозвіл — підтвердьте його. Якщо Viber
+        не встановлений на цьому пристрої, зателефонуйте:
+        <a class="js-phone" data-track="call-viber-fallback" data-label="{pretty}">номер</a>,
+        напишіть у <a href="https://t.me/nikoelectro" target="_blank" rel="noopener noreferrer" data-track="telegram-viber-fallback">Telegram</a>
+        або знайдіть нас у Viber за номером.<br>
+        <button type="button" id="copy-phone">Скопіювати номер</button>
+    </div>
+
+
+    <!-- Нижня панель швидкого зв'язку (лише на телефоні) -->
+    <nav class="mobile-bar" id="mobile-bar" aria-label="Швидкий зв'язок">
+        <a class="btn btn--primary js-phone" data-track="call-sticky"><svg aria-hidden="true"><use href="#i-phone"/></svg> Подзвонити</a>
+        <a class="btn btn--ghost" href="https://t.me/nikoelectro" target="_blank" rel="noopener noreferrer" data-track="telegram-sticky"><svg aria-hidden="true"><use href="#i-send"/></svg> Telegram</a>
+    </nav>
+
+    <button class="to-top" id="to-top" type="button" aria-label="Нагору"><svg aria-hidden="true"><use href="#i-arrow-up"/></svg></button>
+
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="container site-footer__inner">
+
+            <div class="site-footer__brand">
+                <a class="logo" href="#top" data-scroll aria-label="ЕЛЕКТРОБУД — на початок сторінки">
+                    <span class="logo__mark" aria-hidden="true"><svg><use href="#i-bolt"/></svg></span>
+                    <span class="logo__text">ЕЛЕКТРОБУД</span>
+                </a>
+                <p class="site-footer__tagline">Електромонтажні та будівельні роботи. Миколаїв та вся Україна.</p>
+            </div>
+
+            <nav class="site-footer__nav" aria-label="Розділи сторінки (футер)">
+                <ul>
+                    <li><a href="#services" data-scroll>Послуги</a></li>
+                    <li><a href="#about" data-scroll>Про нас</a></li>
+                    <li><a href="#process" data-scroll>Етапи</a></li>
+                    <li><a href="#advantages" data-scroll>Переваги</a></li>
+                    <li><a href="#contact" data-scroll>Контакти</a></li>
+                </ul>
+            </nav>
+
+            <div class="site-footer__contacts">
+                <a class="js-phone" data-track="call-footer" data-label="{pretty}">телефон</a>
+                <span>Пн–Сб 8:00–20:00</span>
+                <span>[budelektro10@gmail.com]</span>
+
+                <!-- ЗАГЛУШКИ соцмереж: замініть # на посилання або видаліть -->
+                <ul class="socials" aria-label="Соцмережі">
+                    <li><a class="icon-btn" href="https://t.me/nikoelectro" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg aria-hidden="true"><use href="#i-send"/></svg></a></li>
+                    <li><a class="icon-btn js-viber" aria-label="Viber"><svg aria-hidden="true"><use href="#i-chat"/></svg></a></li>
+                    <li><a class="icon-btn is-placeholder" href="#top" data-scroll aria-label="Instagram (посилання ще не додано)"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+                    <li><a class="icon-btn is-placeholder" href="#top" data-scroll aria-label="Facebook (посилання ще не додано)"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="container site-footer__bottom">
+            <span>© 2026 ЕЛЕКТРОБУД. Усі права захищені.</span>
+            <span>Ціна договірна</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>

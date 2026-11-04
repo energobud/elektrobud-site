@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>Сторінку не знайдено — ЕЛЕКТРОБУД</title>
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#0b0c0e">
+
+    <!--
+        GitHub Pages показує цю сторінку для будь-якої неіснуючої адреси,
+        тому шляхи до файлів — абсолютні (/elektrobud-site/...).
+    -->
+    <link rel="icon" href="/elektrobud-site/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/elektrobud-site/style.css">
+    <script src="/elektrobud-site/boot.js"></script>
+    <script src="/elektrobud-site/main.js" defer></script>
+</head>
+
+<body>
+
+    <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+        <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></symbol>
+        <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M20 12H4M10 6l-6 6 6 6"/></symbol>
+    </svg>
+
+    <header class="site-header is-scrolled">
+        <div class="container site-header__inner">
+            <a class="logo" href="/elektrobud-site/" aria-label="ЕЛЕКТРОБУД — на головну">
+                <span class="logo__mark" aria-hidden="true"><svg><use href="#i-bolt"/></svg></span>
+                <span class="logo__text">ЕЛЕКТРОБУД</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero--404" aria-labelledby="nf-title">
+            <div class="hero__grid" aria-hidden="true"></div>
+            <div class="container">
+                <div class="hero__content">
+                    <p class="eyebrow hero__anim"><span class="eyebrow__dot" aria-hidden="true"></span>Помилка 404</p>
+                    <h1 class="hero__title" id="nf-title">
+                        <span class="hero__line-wrap"><span class="hero__anim">Сторінку</span></span>
+                        <span class="hero__line-wrap"><span class="hero__anim hero__accent">не знайдено</span></span>
+                    </h1>
+                    <p class="hero__lead hero__anim">
+                        Можливо, посилання застаріло або в адресі помилка.
+                        Перейдіть на головну сторінку або зв'яжіться з нами напряму.
+                    </p>
+                    <div class="hero__cta hero__anim">
+                        <a class="btn btn--primary btn--lg" href="/elektrobud-site/">
+                            <svg aria-hidden="true"><use href="#i-arrow-left"/></svg> На головну
+                        </a>
+                        <a class="btn btn--ghost btn--lg js-phone" data-track="call-404">
+                            <svg aria-hidden="true"><use href="#i-phone"/></svg> Зателефонувати
+                        </a>
+                        <a class="btn-link" href="https://t.me/nikoelectro" target="_blank" rel="noopener noreferrer" data-track="telegram-404">
+                            <svg aria-hidden="true"><use href="#i-send"/></svg> Telegram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-footer__bottom">
+            <span>© 2026 ЕЛЕКТРОБУД. Усі права захищені.</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
