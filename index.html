@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="uk">
 
@@ -6,11 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ЕЛЕКТРОБУД — Електромонтажні та будівельні роботи</title>
+    <title>Електрик Миколаїв — ЕЛЕКТРОБУД | Електромонтажні та будівельні роботи</title>
 
-    <meta name="description" content="ЕЛЕКТРОБУД — електромонтажні, будівельні, ремонтні роботи, відеоспостереження та монтаж сонячних панелей. Миколаїв та вся Україна.">
-
+    <meta name="description" content="ЕЛЕКТРОБУД — електрик у Миколаєві: електромонтажні, будівельні, ремонтні роботи, відеоспостереження та монтаж сонячних панелей. Пн–Сб 8:00–20:00, відповідаємо до 15 хвилин. Миколаїв та вся Україна.">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#101827">
+
+    <!--
+        Адреса сайту (GitHub Pages). Якщо з'явиться власний домен —
+        замініть її тут, в og:url, og:image та в JSON-LD нижче.
+    -->
+    <link rel="canonical" href="https://energobud.github.io/elektrobud-site/">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Open Graph (прев'ю посилання в Telegram, Viber, Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+    <meta property="og:site_name" content="ЕЛЕКТРОБУД">
+    <meta property="og:title" content="ЕЛЕКТРОБУД — електрик та будівельні роботи в Миколаєві">
+    <meta property="og:description" content="Електромонтаж, відеоспостереження, сонячні панелі, ремонт. Пн–Сб 8:00–20:00. Відповідаємо до 15 хвилин. Ціна договірна.">
+    <meta property="og:url" content="https://energobud.github.io/elektrobud-site/">
+    <meta property="og:image" content="https://energobud.github.io/elektrobud-site/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ЕЛЕКТРОБУД — електромонтажні та будівельні роботи">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Структуровані дані для Google (локальний бізнес) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Electrician",
+        "name": "ЕЛЕКТРОБУД",
+        "description": "Електромонтажні, будівельні та ремонтні роботи, відеоспостереження, монтаж сонячних панелей.",
+        "url": "https://energobud.github.io/elektrobud-site/",
+        "image": "https://energobud.github.io/elektrobud-site/og-image.png",
+        "telephone": "+380635062371",
+        "priceRange": "Договірна",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Миколаїв",
+            "addressCountry": "UA"
+        },
+        "areaServed": [
+            { "@type": "City", "name": "Миколаїв" },
+            { "@type": "Country", "name": "Україна" }
+        ],
+        "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "20:00"
+        }],
+        "sameAs": ["https://t.me/nikoelectro"],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Послуги",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Електромонтажні роботи" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Встановлення відеоспостереження" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Монтаж сонячних панелей" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Внутрішні та оздоблювальні роботи" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Покрівельні та земляні роботи" } }
+            ]
+        }
+    }
+    </script>
 
     <style>
 
@@ -23,6 +86,28 @@
             font-family: Arial, sans-serif;
             background: #f2f4f7;
             color: #202b3c;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #f5bd32;
+            outline-offset: 3px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: #f5bd32;
+            color: #101827;
+            padding: 10px 16px;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        .skip-link:focus {
+            left: 10px;
+            top: 10px;
         }
 
         header {
@@ -41,19 +126,32 @@
 
         header p {
             color: #cbd5e1;
-            margin-top: 12px;
+            margin: 12px 0 0;
+        }
+
+        .header-phone {
+            display: inline-block;
+            margin-top: 10px;
+            color: #f5bd32;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .header-phone:hover {
+            text-decoration: underline;
         }
 
         .hero {
             background: #18263b;
             color: white;
             text-align: center;
-            padding: 65px 20px;
+            padding: 55px 20px 60px;
         }
 
         .hero h2 {
             font-size: 32px;
-            margin-bottom: 20px;
+            margin: 0 0 20px;
         }
 
         .hero p {
@@ -61,6 +159,36 @@
             margin: auto;
             line-height: 1.7;
             color: #d1d9e5;
+        }
+
+        .hero .buttons {
+            max-width: 720px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin: 30px auto 0;
+        }
+
+        .hero .btn {
+            margin: 0;
+            flex: 1 1 200px;
+        }
+
+        .info {
+            list-style: none;
+            padding: 0;
+            margin: 22px auto 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 24px;
+            color: #d1d9e5;
+            font-size: 15px;
+        }
+
+        .info strong {
+            color: #fff;
         }
 
         .section {
@@ -117,9 +245,18 @@
             color: white;
         }
 
-        .advantages p {
+        .advantages ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
             line-height: 2;
             color: #d1d9e5;
+        }
+
+        .advantages li::before {
+            content: "✓ ";
+            color: #f5bd32;
+            font-weight: bold;
         }
 
         .price {
@@ -129,7 +266,7 @@
         }
 
         .price h2 {
-            color: #d69b12;
+            color: #a86f00;
             font-size: 28px;
         }
 
@@ -154,6 +291,15 @@
             line-height: 1.6;
         }
 
+        .contact .phone-big {
+            display: inline-block;
+            color: #f5bd32;
+            font-size: 26px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 6px;
+        }
+
         .buttons {
             max-width: 350px;
             margin: 30px auto;
@@ -168,18 +314,58 @@
             color: white;
             font-size: 18px;
             font-weight: bold;
+            text-align: center;
+        }
+
+        .call {
+            background: #15803d;
         }
 
         .telegram {
-            background: #229ED9;
+            background: #0b78b3;
         }
 
         .viber {
-            background: #7360F2;
+            background: #6650e0;
         }
 
         .btn:hover {
-            opacity: 0.85;
+            opacity: 0.88;
+        }
+
+        /* Підказка, якщо Viber не встановлено */
+        .viber-fallback {
+            max-width: 420px;
+            margin: 14px auto 0;
+            padding: 14px 16px;
+            background: #fff;
+            color: #202b3c;
+            border-radius: 9px;
+            border-left: 4px solid #6650e0;
+            text-align: left;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .viber-fallback[hidden] {
+            display: none;
+        }
+
+        .viber-fallback a {
+            color: #15803d;
+            font-weight: bold;
+        }
+
+        .viber-fallback button {
+            margin-top: 8px;
+            padding: 8px 14px;
+            border: 0;
+            border-radius: 6px;
+            background: #6650e0;
+            color: #fff;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
         }
 
         footer {
@@ -188,6 +374,10 @@
             text-align: center;
             padding: 20px;
             font-size: 14px;
+        }
+
+        footer a {
+            color: #cbd5e1;
         }
 
         @media (max-width: 600px) {
@@ -204,6 +394,10 @@
                 font-size: 24px;
             }
 
+            .info {
+                flex-direction: column;
+            }
+
         }
 
     </style>
@@ -212,181 +406,281 @@
 
 <body>
 
+    <a class="skip-link" href="#contact">Перейти до контактів</a>
+
     <header>
         <h1>⚡ ЕЛЕКТРОБУД</h1>
-        <p>Електромонтажні та будівельні роботи</p>
+        <p>Електрик та будівельні роботи в Миколаєві</p>
+        <a class="header-phone" href="tel:+380635062371" data-track="call-header">📞 +38 (063) 506-23-71</a>
     </header>
 
 
-    <section class="hero">
+    <main>
 
-        <h2>Надійність у кожному рішенні!</h2>
+        <section class="hero">
 
-        <p>
-            Пропонуємо широкий спектр електромонтажних,
-            будівельних та ремонтних робіт будь-якої складності.
-            Працюємо відповідально, якісно та з індивідуальним
-            підходом до кожного клієнта.
-        </p>
+            <h2>Надійність у кожному рішенні!</h2>
 
-    </section>
+            <p>
+                Пропонуємо широкий спектр електромонтажних,
+                будівельних та ремонтних робіт будь-якої складності.
+                Працюємо відповідально, якісно та з індивідуальним
+                підходом до кожного клієнта.
+            </p>
 
+            <div class="buttons">
 
-    <section class="section">
+                <a class="btn call" href="tel:+380635062371" data-track="call-hero">
+                    📞 Зателефонувати
+                </a>
 
-        <h2>Наші послуги</h2>
+                <a class="btn telegram"
+                href="https://t.me/nikoelectro"
+                target="_blank"
+                rel="noopener"
+                data-track="telegram-hero">
+                    Написати в Telegram
+                </a>
 
-        <div class="services">
-
-            <div class="service">
-
-                <h3>🔌 Електромонтажні роботи</h3>
-
-                <ul>
-                    <li>Монтаж, заміна та ремонт електропроводки</li>
-                    <li>Встановлення розеток і вимикачів</li>
-                    <li>Монтаж освітлення та електрощитів</li>
-                    <li>Електромонтаж у будинках, квартирах та офісах</li>
-                </ul>
-
-            </div>
-
-
-            <div class="service">
-
-                <h3>📹 Відеоспостереження</h3>
-
-                <ul>
-                    <li>Встановлення систем відеоспостереження</li>
-                    <li>Налаштування камер</li>
-                    <li>Віддалений перегляд зі смартфона</li>
-                </ul>
+                <a class="btn viber js-viber"
+                href="viber://chat?number=%2B380635062371"
+                data-track="viber-hero">
+                    Написати у Viber
+                </a>
 
             </div>
 
+            <ul class="info">
+                <li>🕗 <strong>Пн–Сб 8:00–20:00</strong></li>
+                <li>⚡ Відповідаємо <strong>до 15 хвилин</strong></li>
+                <li>📍 Миколаїв та вся Україна</li>
+            </ul>
 
-            <div class="service">
+        </section>
 
-                <h3>☀️ Сонячні панелі</h3>
 
-                <ul>
-                    <li>Монтаж сонячних панелей</li>
-                    <li>Встановлення супутнього обладнання</li>
-                </ul>
+        <section class="section" aria-labelledby="services-title">
+
+            <h2 id="services-title">Наші послуги</h2>
+
+            <div class="services">
+
+                <div class="service">
+
+                    <h3>🔌 Електромонтажні роботи</h3>
+
+                    <ul>
+                        <li>Монтаж, заміна та ремонт електропроводки</li>
+                        <li>Встановлення розеток і вимикачів</li>
+                        <li>Монтаж освітлення та електрощитів</li>
+                        <li>Електромонтаж у будинках, квартирах та офісах</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="service">
+
+                    <h3>📹 Відеоспостереження</h3>
+
+                    <ul>
+                        <li>Встановлення систем відеоспостереження</li>
+                        <li>Налаштування камер</li>
+                        <li>Віддалений перегляд зі смартфона</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="service">
+
+                    <h3>☀️ Сонячні панелі</h3>
+
+                    <ul>
+                        <li>Монтаж сонячних панелей</li>
+                        <li>Встановлення супутнього обладнання</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="service">
+
+                    <h3>🏠 Внутрішні та оздоблювальні роботи</h3>
+
+                    <ul>
+                        <li>Шпаклювання стін і стель</li>
+                        <li>Малярні роботи</li>
+                        <li>Підготовка поверхонь</li>
+                        <li>Плиточні роботи</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="service">
+
+                    <h3>🏗️ Покрівельні та земляні роботи</h3>
+
+                    <ul>
+                        <li>Усі види покрівельних робіт</li>
+                        <li>Демонтажні роботи</li>
+                        <li>Риття котлованів</li>
+                        <li>Земляні роботи різної складності</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="service">
+
+                    <h3>🔧 Додаткові послуги</h3>
+
+                    <ul>
+                        <li>Діагностика несправностей</li>
+                        <li>Модернізація електричних систем</li>
+                        <li>Технічне обслуговування</li>
+                    </ul>
+
+                </div>
 
             </div>
 
+        </section>
 
-            <div class="service">
 
-                <h3>🏠 Внутрішні та оздоблювальні роботи</h3>
+        <section class="advantages" aria-labelledby="advantages-title">
 
-                <ul>
-                    <li>Шпаклювання стін і стель</li>
-                    <li>Малярні роботи</li>
-                    <li>Підготовка поверхонь</li>
-                    <li>Плиточні роботи</li>
-                </ul>
+            <h2 id="advantages-title">Наші переваги</h2>
+
+            <ul>
+                <li>Роботи будь-якої складності</li>
+                <li>Індивідуальний підхід до клієнта</li>
+                <li>Відповідальне ставлення до роботи</li>
+                <li>Підбір оптимальних рішень</li>
+                <li>Попереднє узгодження вартості</li>
+            </ul>
+
+        </section>
+
+
+        <section class="price" aria-labelledby="price-title">
+
+            <h2 id="price-title">💰 ЦІНА ДОГОВІРНА!</h2>
+
+            <p>
+                Вартість залежить від обсягу та складності робіт.
+                Усі деталі обговорюємо заздалегідь.
+            </p>
+
+        </section>
+
+
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+
+            <h2 id="contact-title">Зв'яжіться з нами!</h2>
+
+            <p>
+                📍 Працюємо в Миколаєві та по всій Україні!
+            </p>
+
+            <p>
+                Потрібно провести електрику, зробити ремонт,
+                встановити відеоспостереження або сонячні панелі?
+                Звертайтеся — підберемо оптимальне рішення!
+            </p>
+
+            <p>
+                <a class="phone-big" href="tel:+380635062371" data-track="call-contact">+38 (063) 506-23-71</a><br>
+                🕗 Пн–Сб 8:00–20:00 · Відповідаємо до 15 хвилин
+            </p>
+
+            <div class="buttons">
+
+                <a class="btn call" href="tel:+380635062371" data-track="call-contact-btn">
+                    📞 Зателефонувати
+                </a>
+
+                <a class="btn telegram"
+                href="https://t.me/nikoelectro"
+                target="_blank"
+                rel="noopener"
+                data-track="telegram-contact">
+                    Написати в Telegram
+                </a>
+
+                <a class="btn viber js-viber"
+                href="viber://chat?number=%2B380635062371"
+                data-track="viber-contact">
+                    Написати у Viber
+                </a>
 
             </div>
 
+        </section>
 
-            <div class="service">
-
-                <h3>🏗️ Покрівельні та земляні роботи</h3>
-
-                <ul>
-                    <li>Усі види покрівельних робіт</li>
-                    <li>Демонтажні роботи</li>
-                    <li>Риття котлованів</li>
-                    <li>Земляні роботи різної складності</li>
-                </ul>
-
-            </div>
+    </main>
 
 
-            <div class="service">
-
-                <h3>🔧 Додаткові послуги</h3>
-
-                <ul>
-                    <li>Діагностика несправностей</li>
-                    <li>Модернізація електричних систем</li>
-                    <li>Технічне обслуговування</li>
-                </ul>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="advantages">
-
-        <h2>Наші переваги</h2>
-
-        <p>
-            ✓ Роботи будь-якої складності<br>
-            ✓ Індивідуальний підхід до клієнта<br>
-            ✓ Відповідальне ставлення до роботи<br>
-            ✓ Підбір оптимальних рішень<br>
-            ✓ Попереднє узгодження вартості
-        </p>
-
-    </section>
-
-
-    <section class="price">
-
-        <h2>💰 ЦІНА ДОГОВІРНА!</h2>
-
-        <p>
-            Вартість залежить від обсягу та складності робіт.
-            Усі деталі обговорюємо заздалегідь.
-        </p>
-
-    </section>
-
-
-    <section class="contact">
-
-        <h2>Зв'яжіться з нами!</h2>
-
-        <p>
-            📍 Працюємо в Миколаєві та по всій Україні!
-        </p>
-
-        <p>
-            Потрібно провести електрику, зробити ремонт,
-            встановити відеоспостереження або сонячні панелі?
-            Звертайтеся — підберемо оптимальне рішення!
-        </p>
-
-        <div class="buttons">
-
-            <a class="btn telegram"
-            href="https://t.me/nikoelectro"
-            target="_blank"
-            rel="noopener">
-                Написати в Telegram
-            </a>
-
-            <a class="btn viber"
-            href="viber://chat?number=%2B380635062371">
-                Написати у Viber
-            </a>
-
-        </div>
-
-    </section>
+    <!-- Підказка, якщо Viber не відкрився (показується скриптом) -->
+    <div class="viber-fallback" id="viber-fallback" role="status" hidden>
+        <strong>Viber не відкрився?</strong><br>
+        Можливо, він не встановлений на цьому пристрої.
+        Зателефонуйте: <a href="tel:+380635062371" data-track="call-viber-fallback">+38 (063) 506-23-71</a>,
+        напишіть у <a href="https://t.me/nikoelectro" target="_blank" rel="noopener" data-track="telegram-viber-fallback">Telegram</a>
+        або знайдіть нас у Viber за номером.<br>
+        <button type="button" id="copy-phone">Скопіювати номер</button>
+    </div>
 
 
     <footer>
 
         © 2026 ЕЛЕКТРОБУД. Усі права захищені.
+        · <a href="tel:+380635062371">+38 (063) 506-23-71</a>
 
     </footer>
+
+
+    <script>
+        (function () {
+            var PHONE = '+380635062371';
+            var box = document.getElementById('viber-fallback');
+            var copyBtn = document.getElementById('copy-phone');
+
+            // Якщо Viber встановлено, браузер переходить у застосунок
+            // (сторінка втрачає фокус або стає прихованою). Якщо ні — нічого
+            // не відбувається, і через 1,5 с показуємо підказку під кнопкою.
+            document.querySelectorAll('.js-viber').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    var left = false;
+                    function markLeft() { left = true; }
+
+                    window.addEventListener('blur', markLeft, { once: true });
+                    document.addEventListener('visibilitychange', markLeft, { once: true });
+
+                    setTimeout(function () {
+                        window.removeEventListener('blur', markLeft);
+                        document.removeEventListener('visibilitychange', markLeft);
+                        if (!left) {
+                            link.parentNode.insertAdjacentElement('afterend', box);
+                            box.hidden = false;
+                        }
+                    }, 1500);
+                });
+            });
+
+            copyBtn.addEventListener('click', function () {
+                function done() { copyBtn.textContent = 'Номер скопійовано ✓'; }
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(PHONE).then(done, function () {
+                        window.prompt('Скопіюйте номер:', PHONE);
+                    });
+                } else {
+                    window.prompt('Скопіюйте номер:', PHONE);
+                }
+            });
+        })();
+    </script>
 
 </body>
 
