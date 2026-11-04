@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--
+        Безпека. GitHub Pages не дозволяє задавати HTTP-заголовки,
+        тому правила задано через meta. Скрипти та стилі — лише з цього сайту
+        (style.css, main.js). Якщо додаєте аналітику чи інший сторонній скрипт —
+        додайте його домен у script-src (і connect-src), інакше браузер його заблокує.
+    -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; font-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
     <title>Електрик Миколаїв — ЕЛЕКТРОБУД | Електромонтажні та будівельні роботи</title>
 
     <meta name="description" content="ЕЛЕКТРОБУД — електрик у Миколаєві: електромонтажні, будівельні, ремонтні роботи, відеоспостереження та монтаж сонячних панелей. Пн–Сб 8:00–20:00, відповідаємо до 15 хвилин. Миколаїв та вся Україна.">
@@ -75,332 +85,7 @@
     }
     </script>
 
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f2f4f7;
-            color: #202b3c;
-        }
-
-        a:focus-visible,
-        button:focus-visible {
-            outline: 3px solid #f5bd32;
-            outline-offset: 3px;
-        }
-
-        .skip-link {
-            position: absolute;
-            left: -9999px;
-            top: 0;
-            background: #f5bd32;
-            color: #101827;
-            padding: 10px 16px;
-            font-weight: bold;
-            z-index: 10;
-        }
-
-        .skip-link:focus {
-            left: 10px;
-            top: 10px;
-        }
-
-        header {
-            background: #101827;
-            color: white;
-            padding: 25px 15px;
-            text-align: center;
-            border-bottom: 4px solid #f5bd32;
-        }
-
-        header h1 {
-            font-size: 38px;
-            margin: 0;
-            letter-spacing: 2px;
-        }
-
-        header p {
-            color: #cbd5e1;
-            margin: 12px 0 0;
-        }
-
-        .header-phone {
-            display: inline-block;
-            margin-top: 10px;
-            color: #f5bd32;
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .header-phone:hover {
-            text-decoration: underline;
-        }
-
-        .hero {
-            background: #18263b;
-            color: white;
-            text-align: center;
-            padding: 55px 20px 60px;
-        }
-
-        .hero h2 {
-            font-size: 32px;
-            margin: 0 0 20px;
-        }
-
-        .hero p {
-            max-width: 650px;
-            margin: auto;
-            line-height: 1.7;
-            color: #d1d9e5;
-        }
-
-        .hero .buttons {
-            max-width: 720px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            margin: 30px auto 0;
-        }
-
-        .hero .btn {
-            margin: 0;
-            flex: 1 1 200px;
-        }
-
-        .info {
-            list-style: none;
-            padding: 0;
-            margin: 22px auto 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 8px 24px;
-            color: #d1d9e5;
-            font-size: 15px;
-        }
-
-        .info strong {
-            color: #fff;
-        }
-
-        .section {
-            max-width: 1050px;
-            margin: auto;
-            padding: 45px 20px;
-        }
-
-        .section h2 {
-            text-align: center;
-            font-size: 28px;
-            margin-bottom: 30px;
-            color: #17263b;
-        }
-
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .service {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            border-bottom: 4px solid #f5bd32;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
-        }
-
-        .service h3 {
-            color: #17263b;
-            font-size: 20px;
-            margin-top: 0;
-        }
-
-        .service ul {
-            padding-left: 20px;
-        }
-
-        .service li {
-            margin-bottom: 10px;
-            line-height: 1.5;
-            color: #526071;
-        }
-
-        .advantages {
-            background: #18263b;
-            color: white;
-            padding: 45px 20px;
-            text-align: center;
-        }
-
-        .advantages h2 {
-            color: white;
-        }
-
-        .advantages ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            line-height: 2;
-            color: #d1d9e5;
-        }
-
-        .advantages li::before {
-            content: "✓ ";
-            color: #f5bd32;
-            font-weight: bold;
-        }
-
-        .price {
-            text-align: center;
-            padding: 40px 20px;
-            background: #fff;
-        }
-
-        .price h2 {
-            color: #a86f00;
-            font-size: 28px;
-        }
-
-        .price p {
-            line-height: 1.6;
-            color: #526071;
-        }
-
-        .contact {
-            background: #101827;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        .contact h2 {
-            font-size: 30px;
-        }
-
-        .contact p {
-            color: #cbd5e1;
-            line-height: 1.6;
-        }
-
-        .contact .phone-big {
-            display: inline-block;
-            color: #f5bd32;
-            font-size: 26px;
-            font-weight: bold;
-            text-decoration: none;
-            margin-top: 6px;
-        }
-
-        .buttons {
-            max-width: 350px;
-            margin: 30px auto;
-        }
-
-        .btn {
-            display: block;
-            padding: 16px;
-            margin: 15px 0;
-            border-radius: 9px;
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        .call {
-            background: #15803d;
-        }
-
-        .telegram {
-            background: #0b78b3;
-        }
-
-        .viber {
-            background: #6650e0;
-        }
-
-        .btn:hover {
-            opacity: 0.88;
-        }
-
-        /* Підказка, якщо Viber не встановлено */
-        .viber-fallback {
-            max-width: 420px;
-            margin: 14px auto 0;
-            padding: 14px 16px;
-            background: #fff;
-            color: #202b3c;
-            border-radius: 9px;
-            border-left: 4px solid #6650e0;
-            text-align: left;
-            font-size: 15px;
-            line-height: 1.5;
-        }
-
-        .viber-fallback[hidden] {
-            display: none;
-        }
-
-        .viber-fallback a {
-            color: #15803d;
-            font-weight: bold;
-        }
-
-        .viber-fallback button {
-            margin-top: 8px;
-            padding: 8px 14px;
-            border: 0;
-            border-radius: 6px;
-            background: #6650e0;
-            color: #fff;
-            font-size: 15px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        footer {
-            background: #0b1220;
-            color: #94a3b8;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
-
-        footer a {
-            color: #cbd5e1;
-        }
-
-        @media (max-width: 600px) {
-
-            header h1 {
-                font-size: 30px;
-            }
-
-            .hero h2 {
-                font-size: 25px;
-            }
-
-            .section h2 {
-                font-size: 24px;
-            }
-
-            .info {
-                flex-direction: column;
-            }
-
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -409,9 +94,9 @@
     <a class="skip-link" href="#contact">Перейти до контактів</a>
 
     <header>
-        <h1>⚡ ЕЛЕКТРОБУД</h1>
+        <h1><span aria-hidden="true">⚡</span> ЕЛЕКТРОБУД</h1>
         <p>Електрик та будівельні роботи в Миколаєві</p>
-        <a class="header-phone" href="tel:+380635062371" data-track="call-header">📞 +38 (063) 506-23-71</a>
+        <a class="header-phone js-phone" data-track="call-header" data-label="{pretty}"><span aria-hidden="true">📞</span> <span class="js-phone-text">Показати номер</span></a>
     </header>
 
 
@@ -428,32 +113,38 @@
                 підходом до кожного клієнта.
             </p>
 
-            <div class="buttons">
+            <div class="buttons" data-hide-mobile-bar>
 
-                <a class="btn call" href="tel:+380635062371" data-track="call-hero">
-                    📞 Зателефонувати
+                <a class="btn call js-phone" data-track="call-hero">
+                    <span aria-hidden="true">📞</span> Зателефонувати
                 </a>
 
                 <a class="btn telegram"
                 href="https://t.me/nikoelectro"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 data-track="telegram-hero">
                     Написати в Telegram
                 </a>
 
                 <a class="btn viber js-viber"
-                href="viber://chat?number=%2B380635062371"
                 data-track="viber-hero">
                     Написати у Viber
                 </a>
 
             </div>
 
+            <noscript>
+                <p class="noscript-note">
+                    Щоб побачити номер телефону, увімкніть JavaScript —
+                    або напишіть нам у Telegram: <a href="https://t.me/nikoelectro" rel="noopener noreferrer">@nikoelectro</a>
+                </p>
+            </noscript>
+
             <ul class="info">
-                <li>🕗 <strong>Пн–Сб 8:00–20:00</strong></li>
-                <li>⚡ Відповідаємо <strong>до 15 хвилин</strong></li>
-                <li>📍 Миколаїв та вся Україна</li>
+                <li><span aria-hidden="true">🕗</span> <strong>Пн–Сб 8:00–20:00</strong></li>
+                <li><span aria-hidden="true">⚡</span> Відповідаємо <strong>до 15 хвилин</strong></li>
+                <li><span aria-hidden="true">📍</span> Миколаїв та вся Україна</li>
             </ul>
 
         </section>
@@ -467,7 +158,7 @@
 
                 <div class="service">
 
-                    <h3>🔌 Електромонтажні роботи</h3>
+                    <h3><span aria-hidden="true">🔌</span> Електромонтажні роботи</h3>
 
                     <ul>
                         <li>Монтаж, заміна та ремонт електропроводки</li>
@@ -481,7 +172,7 @@
 
                 <div class="service">
 
-                    <h3>📹 Відеоспостереження</h3>
+                    <h3><span aria-hidden="true">📹</span> Відеоспостереження</h3>
 
                     <ul>
                         <li>Встановлення систем відеоспостереження</li>
@@ -494,7 +185,7 @@
 
                 <div class="service">
 
-                    <h3>☀️ Сонячні панелі</h3>
+                    <h3><span aria-hidden="true">☀️</span> Сонячні панелі</h3>
 
                     <ul>
                         <li>Монтаж сонячних панелей</li>
@@ -506,7 +197,7 @@
 
                 <div class="service">
 
-                    <h3>🏠 Внутрішні та оздоблювальні роботи</h3>
+                    <h3><span aria-hidden="true">🏠</span> Внутрішні та оздоблювальні роботи</h3>
 
                     <ul>
                         <li>Шпаклювання стін і стель</li>
@@ -520,7 +211,7 @@
 
                 <div class="service">
 
-                    <h3>🏗️ Покрівельні та земляні роботи</h3>
+                    <h3><span aria-hidden="true">🏗️</span> Покрівельні та земляні роботи</h3>
 
                     <ul>
                         <li>Усі види покрівельних робіт</li>
@@ -534,7 +225,7 @@
 
                 <div class="service">
 
-                    <h3>🔧 Додаткові послуги</h3>
+                    <h3><span aria-hidden="true">🔧</span> Додаткові послуги</h3>
 
                     <ul>
                         <li>Діагностика несправностей</li>
@@ -566,7 +257,7 @@
 
         <section class="price" aria-labelledby="price-title">
 
-            <h2 id="price-title">💰 ЦІНА ДОГОВІРНА!</h2>
+            <h2 id="price-title"><span aria-hidden="true">💰</span> ЦІНА ДОГОВІРНА!</h2>
 
             <p>
                 Вартість залежить від обсягу та складності робіт.
@@ -581,7 +272,7 @@
             <h2 id="contact-title">Зв'яжіться з нами!</h2>
 
             <p>
-                📍 Працюємо в Миколаєві та по всій Україні!
+                <span aria-hidden="true">📍</span> Працюємо в Миколаєві та по всій Україні!
             </p>
 
             <p>
@@ -591,26 +282,25 @@
             </p>
 
             <p>
-                <a class="phone-big" href="tel:+380635062371" data-track="call-contact">+38 (063) 506-23-71</a><br>
-                🕗 Пн–Сб 8:00–20:00 · Відповідаємо до 15 хвилин
+                <a class="phone-big js-phone" data-track="call-contact" data-label="{pretty}">Показати номер</a><br>
+                <span aria-hidden="true">🕗</span> Пн–Сб 8:00–20:00 · Відповідаємо до 15 хвилин
             </p>
 
-            <div class="buttons">
+            <div class="buttons" data-hide-mobile-bar>
 
-                <a class="btn call" href="tel:+380635062371" data-track="call-contact-btn">
-                    📞 Зателефонувати
+                <a class="btn call js-phone" data-track="call-contact-btn">
+                    <span aria-hidden="true">📞</span> Зателефонувати
                 </a>
 
                 <a class="btn telegram"
                 href="https://t.me/nikoelectro"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 data-track="telegram-contact">
                     Написати в Telegram
                 </a>
 
                 <a class="btn viber js-viber"
-                href="viber://chat?number=%2B380635062371"
                 data-track="viber-contact">
                     Написати у Viber
                 </a>
@@ -624,63 +314,31 @@
 
     <!-- Підказка, якщо Viber не відкрився (показується скриптом) -->
     <div class="viber-fallback" id="viber-fallback" role="status" hidden>
-        <strong>Viber не відкрився?</strong><br>
-        Можливо, він не встановлений на цьому пристрої.
-        Зателефонуйте: <a href="tel:+380635062371" data-track="call-viber-fallback">+38 (063) 506-23-71</a>,
-        напишіть у <a href="https://t.me/nikoelectro" target="_blank" rel="noopener" data-track="telegram-viber-fallback">Telegram</a>
+        <strong>Не вдалося відкрити Viber?</strong><br>
+        Якщо браузер запитує дозвіл — підтвердьте його. Якщо Viber
+        не встановлений на цьому пристрої, зателефонуйте: <a class="js-phone" data-track="call-viber-fallback" data-label="{pretty}">номер</a>,
+        напишіть у <a href="https://t.me/nikoelectro" target="_blank" rel="noopener noreferrer" data-track="telegram-viber-fallback">Telegram</a>
         або знайдіть нас у Viber за номером.<br>
         <button type="button" id="copy-phone">Скопіювати номер</button>
     </div>
 
 
+    <!-- Нижня панель швидкого зв'язку (лише на телефоні) -->
+    <nav class="mobile-bar" id="mobile-bar" aria-label="Швидкий зв'язок">
+        <a class="call js-phone" data-track="call-sticky"><span aria-hidden="true">📞</span> Подзвонити</a>
+        <a class="telegram" href="https://t.me/nikoelectro" target="_blank" rel="noopener noreferrer" data-track="telegram-sticky"><span aria-hidden="true">✈️</span> Telegram</a>
+    </nav>
+
+
     <footer>
 
         © 2026 ЕЛЕКТРОБУД. Усі права захищені.
-        · <a href="tel:+380635062371">+38 (063) 506-23-71</a>
+        · <a class="js-phone" data-label="{pretty}">телефон</a>
 
     </footer>
 
 
-    <script>
-        (function () {
-            var PHONE = '+380635062371';
-            var box = document.getElementById('viber-fallback');
-            var copyBtn = document.getElementById('copy-phone');
-
-            // Якщо Viber встановлено, браузер переходить у застосунок
-            // (сторінка втрачає фокус або стає прихованою). Якщо ні — нічого
-            // не відбувається, і через 1,5 с показуємо підказку під кнопкою.
-            document.querySelectorAll('.js-viber').forEach(function (link) {
-                link.addEventListener('click', function () {
-                    var left = false;
-                    function markLeft() { left = true; }
-
-                    window.addEventListener('blur', markLeft, { once: true });
-                    document.addEventListener('visibilitychange', markLeft, { once: true });
-
-                    setTimeout(function () {
-                        window.removeEventListener('blur', markLeft);
-                        document.removeEventListener('visibilitychange', markLeft);
-                        if (!left) {
-                            link.parentNode.insertAdjacentElement('afterend', box);
-                            box.hidden = false;
-                        }
-                    }, 1500);
-                });
-            });
-
-            copyBtn.addEventListener('click', function () {
-                function done() { copyBtn.textContent = 'Номер скопійовано ✓'; }
-                if (navigator.clipboard && navigator.clipboard.writeText) {
-                    navigator.clipboard.writeText(PHONE).then(done, function () {
-                        window.prompt('Скопіюйте номер:', PHONE);
-                    });
-                } else {
-                    window.prompt('Скопіюйте номер:', PHONE);
-                }
-            });
-        })();
-    </script>
+    <script src="main.js" defer></script>
 
 </body>
 
